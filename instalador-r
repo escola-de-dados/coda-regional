@@ -1,4 +1,6 @@
 #pacotes a serem instalados nas oficinas do coda amazonia 2024
+#colar o script de instalação no console do RStudio
+
 instalador <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg)) 
@@ -9,8 +11,10 @@ instalador <- function(pkg){
 # usage
 pacotes <- c("tidyverse","tidytext","rjson","wordcloud2","magick","tm")
              
-
 instalador(pacotes)
+
+
+#script de validação
 
 #validar instalação
 is_package_installed <- function(package_name) {
