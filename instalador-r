@@ -11,3 +11,14 @@ pacotes <- c("tidyverse","tidytext","rjson","wordcloud2","magick","tm")
              
 
 instalador(pacotes)
+
+#validar instalação
+is_package_installed <- function(package_name) {
+  package_name %in% rownames(installed.packages())
+}
+
+# Usando a função
+if (is_package_installed("nome_do_pacote")) {
+  print("Pacote está instalado.")
+} else {
+  print("Pacote não está instalado.")
